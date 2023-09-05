@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Linear Search Visualizer</title>
+    <link rel="stylesheet" href="/sorting.css">
+</head>
+<body>
+    <div class="container">
+        <h1 style="color: #00ff00;;">Search Visualizer</h1>
+        <p id="sortReminder" style="color: rgb(255, 255, 255);">
+    Please ensure that your array is sorted before using binary search,
+    <strong id="animatedText" style="color: #00ff00;"></strong>
+</p>
+
+
+        <div class="array-container" id="arrayContainer">
+            <!-- Array elements will be displayed here -->
+        </div>
+        <div class="input-container">
+            <input type="number" id="elementInput" placeholder="Enter an element" class="element-input">
+            <input type="number" id="targetInput" placeholder="Enter a target" class="target-input">
+            <button id="addElement">Add Element</button>
+        </div>
+        
+        <div class="search-container">
+           
+            <button id="linearSearchButton" class="button-styling">Linear Search</button>
+            <button id="binarySearchButton" class="button-styling">Binary Search</button>
+            <button id="resetButton" class="button-styling">Reset</button>
+        </div>
+        
+    </div>
+    <script src="/searching.js"></script>
+</body>
+</html>

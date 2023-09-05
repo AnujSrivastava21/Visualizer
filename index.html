@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+   
+
+    <div class="info-container">
+        <h2 class="info-heading">Sorting</h2>
+        <p class="info-text">
+            Sorting is the process of arranging data in a specific order, often in ascending or descending order. 
+            It helps in making data more organized and efficient to search through, making tasks such as searching 
+            and data analysis faster and more manageable.
+        </p>
+        <p class="animated-text">Sorting can improve the efficiency and performance of various algorithms and data processing tasks!</p>
+        <div class="button-container">
+            
+            <a href="/sorting.html" class="green-button">Sorting visualization</a>
+            <a href="/searching.html" class="green-button">Search visualization</a>
+            <a href="/stack.html" class="green-button">Stack visualization</a>
+            <a href="/queue.html" class="green-button">Queue visualization</a>
+           
+        </div>
+       
+    </div>
+
+    <script src="/main.js"></script>
+    <script>
+        // Initial text and corresponding paragraphs
+        const texts = ["Sorting", "Searching","Algorithm"];
+        const paragraphs = [
+            "Sorting is the process of arranging data in a specific order, often in ascending or descending order. It helps in making data more organized and efficient to search through, making tasks such as searching and data analysis faster and more manageable.",
+            "Searching is the process of finding specific data or elements within a dataset. It is essential for quickly locating information and is a fundamental operation in various computer algorithms and applications.",
+            "BFS and DFS,Dijkstra's Algorithm,Prim's Algorithm,Kruskal's Algorithm,Bellman-Ford Algorithm,Floyd-Warshall Algorithm,Topological Sort,Binary Search Tree (BST),Lowest Common Ancestor are the some famous algorithm. "
+        ];
+        const animatedTexts = [
+            "Sorting can improve the efficiency and performance of various algorithms and data processing tasks!",
+            "Searching plays a crucial role in the efficiency of data retrieval and is a fundamental part of many algorithms.",
+            "Find the Best Way: They figure out the best way to do things like finding the quickest route on a map or organizing tasks efficiently."
+        ];
+
+        let currentTextIndex = 0;
+        let typingInterval;
+
+        function typeHeading(text) {
+            const heading = document.querySelector('.info-heading');
+
+            let i = 0;
+            heading.textContent = ''; // Clear existing text
+            clearInterval(typingInterval);
+
+            typingInterval = setInterval(() => {
+                heading.textContent += text.charAt(i);
+                i++;
+
+                if (i === text.length) {
+                    clearInterval(typingInterval);
+                    // After typing, show the rest of the content
+                    showTextElements();
+                }
+            }, 100);
+        }
+
+        function showTextElements() {
+            const infoContainer = document.querySelector('.info-container');
+            const infoText = document.querySelector('.info-text');
+            const animatedText = document.querySelector('.animated-text');
+
+            infoContainer.style.display = 'block'; // Show the container
+
+            // Show the infoText and start its typing animation
+            infoText.style.display = 'block';
+            infoText.style.animation = 'typing 4s steps(40, end) 1s forwards';
+
+            // Start the typing animation for animatedText
+            animatedText.style.animation = 'typing 4s steps(40, end) 1s forwards';
+        }
+
+        // Function to toggle between Sorting and Searching
+        function toggleSortingSearching() {
+            currentTextIndex = (currentTextIndex + 1) % texts.length;
+            typeHeading(texts[currentTextIndex]);
+            // Change the paragraph content and animated text based on the current text
+            document.querySelector('.info-text').textContent = paragraphs[currentTextIndex];
+            document.querySelector('.animated-text').textContent = animatedTexts[currentTextIndex];
+        }
+
+        // Delay the initial typing animation by 3 seconds
+        setTimeout(() => {
+            typeHeading(texts[currentTextIndex]);
+            // Start the toggle loop
+            setInterval(toggleSortingSearching, 5000);
+        }, 1000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sorting</title>
+    <link rel="stylesheet" href="/sorting.css">
+
+</head>
+<body>
+    <div class="container">
+        <div id="algorithm-box">
+            <h2 id="algorithmTitle">Sorting Algorithm</h2>
+            <p id="algorithmInfo" style="visibility: hidden;">
+                Algorithm details will be displayed here.
+            </p>
+            <p id="bubbleSortInfo" style="visibility: hidden;">
+                Bubble sort is a simple sorting algorithm with a time complexity of O(n^2) and a space complexity of O(1). It's primarily used for educational purposes due to its inefficiency for large datasets, but it can be practical for small datasets or nearly sorted data.
+            </p>
+            <p id="heapSortInfo" style="visibility: hidden;">
+                Heap sort is a comparison-based sorting algorithm that uses a binary heap data structure. It has a time complexity of O(n log n) and is often used for its consistent performance across different input data distributions.
+            </p>
+            <!-- Include similar hidden information for other sorting algorithms -->
+        </div>
+        
+       
+        <div class="array-container" id="arrayContainer">
+            <!-- Array elements will be displayed here -->
+        </div>
+        <div class="input-container">
+            <input type="number" id="elementInput" placeholder="Enter an element">
+            <button id="addElement">Add Element</button>
+            <button id="clearInput">Clear Input</button> 
+
+        </div>
+        <div class="button-container">
+            <button id="bubblesortButton" class="button">Bubble Sort</button>
+        <button id="heapSortButton" class="button">Heap Sort</button>
+        <button id="selectionSortButton" class="button">Selection Sort</button>
+        <button id="insertionSortButton" class="button">Insertion Sort</button>
+        <button id="countSortButton" class="button">Count Sort</button>
+        <button id="mergeSortButton" class="button">Merge Sort</button>
+        </div>
+
+
+    </div>
+    <script src="sorting.js"></script>
+</body>
+</html>

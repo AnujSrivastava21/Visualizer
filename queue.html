@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Famous Algorithms</title>
+    <link rel="stylesheet" href="/stack.css">
+</head>
+<body>
+    <div class="parent-container">
+        <div class="container-55">
+            <!-- Heading centered in the container -->
+            <h1></h1>
+            <!-- Details about a Queue -->
+            <p class="paragraph">A queue is a linear data structure that follows the First In, First Out (FIFO) principle. In a queue, elements are added at the rear (enqueue) and removed from the front (dequeue). It's often used in computer science for tasks like process scheduling and breadth-first search algorithms.
+                <p class="paragraph1">Enqueue (Adding an element to the rear):
+                    Time Complexity: O(1)
+                    In an array-based implementation, you can enqueue an element by simply adding it to the end of the array. This is a constant-time operation</p>
+                <p class="paragraph1">equeue (Removing an element from the front):
+                    Time Complexity: O(n)
+                    In an array-based implementation, dequeuing requires shifting all remaining elements to fill the gap left by the removed element. This results in a linear time operation, as you have to move n-1 elements in the worst case.</p>
+                    
+
+            </p>
+        </div>
+        <div class="container-45">
+            <!-- Rectangle and Input -->
+            <div class="rectangle"></div>
+            <input type="text" id="queueInput" placeholder="Enter element">
+            <!-- Buttons for Enqueue, Dequeue, and Peek -->
+            <div class="buttons">
+                <button id="enqueueButton">Enqueue</button>
+                <button id="dequeueButton">Dequeue</button>
+                <button id="peekButton">Peek</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="queue.js"></script>
+</body>
+</html>

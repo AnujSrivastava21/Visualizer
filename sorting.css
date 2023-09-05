@@ -1,0 +1,324 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+     background-color: black; /* Dark blue shade background */
+    
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background-image: linear-gradient(45deg, #ff5733, #6e00ff, #00ffec, #33ff57); */
+    background-size: 400% 400%;
+    animation: gradientBackground 15s ease infinite;
+    color: #ffffff; /* White text color */
+}
+
+
+.container {
+    text-align: center;
+    /* background-color: rgba(255, 255, 255, 0.8); Cooler container background */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 90%;
+    max-width: 600px;
+    backdrop-filter: blur(10px); /* Apply blur effect to the container */
+    color: #d6e6ff; /* Cooler text color */
+}
+    
+
+
+h1 {
+    margin-bottom: 20px;
+    color: #007BFF;
+}
+
+/* Array Container Styles */
+.array-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    min-height: 150px;
+    border-bottom: 1px solid#ffffff;;
+    border-radius: 5px;
+    /* background-color: #fff; */
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.array-bar {
+    width: 30px;
+    background-color:#00ff00;;
+    margin: 0 2px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    line-height: 30px;
+}
+
+/* Input Container Styles */
+.input-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#elementInput {
+    background: transparent;
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px solid #00ff00;
+    border-radius: 5px;
+    margin-right: 10px;
+    color: #00ff00;
+}
+
+#addElement {
+    background: transparent;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    /* background-color: #007BFF; */
+    border: none;
+    color: white;
+    border-bottom: 2px solid  #00ff00;
+    border-left: 2px solid #00ff00;
+    border-radius: 20px;
+    transition: background-color 0.2s;
+    
+}
+
+#addElement:hover {
+    border-bottom: 2px solid  #ffffff;
+    border-left: 2px solid #ffffff;
+    
+    color: #00ff00;
+}
+#clearInput {
+    margin: 20px;
+    background: transparent;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    /* background-color: #007BFF; */
+    border: none;
+    color: white;
+    border-bottom: 2px solid  #00ff00;
+    border-left: 2px solid #00ff00;
+    border-radius: 20px;
+    transition: background-color 0.2s;
+    
+}
+
+#clearInput:hover {
+    border-bottom: 2px solid  #ffffff;
+    border-left: 2px solid #ffffff;
+    
+    color: #00ff00;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        margin: 0 10px;
+    }
+    
+    .array-container {
+        margin-bottom: 10px;
+    }
+    
+    .input-container {
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+    
+    #elementInput {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+.algorithm-box {
+    /* background-color: rgba(255, 255, 255, 0.9); */
+    color:#00ff00;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.algorithm-box h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color:#00ff00;
+}
+
+.algorithm-box ul {
+    list-style: disc;
+    padding-left: 20px;
+    font-size: 16px;
+    color: #00ff00;;
+}
+.algorithm-box ul li{
+    color: #ffffff;
+}
+#algorithmTitle {
+    color: #00ff00; /* Green color for h2 element */
+}
+
+#bubbleSortInfo {
+    visibility: hidden;
+    color: white; /* White color for p element */
+}
+
+
+/* Button Styles */
+.button {
+    /* background-color: #3498db; */
+    /* color: #fff; */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    color:#ffffff;;
+    margin: 5px;
+    background: transparent;
+    border-bottom: 2px solid  #00ff00;
+    border-left: 2px solid #00ff00;
+    border-radius: 20px;
+}
+
+
+
+/* Different Button Styles */
+#heapSortButton {
+    color: #ffffff;
+    background: transparent;
+    border-bottom: 2px solid  #00ff00;
+    border-left: 2px solid #00ff00;
+    border-radius: 20px;
+}
+
+#heapSortButton:hover {
+    color: #00ff00;
+    background: transparent;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    border-radius:20px
+    
+}
+#bubbleSortButton {
+    color: #ffffff;
+    background: transparent;
+    border-bottom: 2px solid  #00ff00;
+    border-left: 2px solid #00ff00;
+    border-radius: 20px;
+    background: transparent;
+}
+
+#selectionSortButton {
+    color: #ffffff;
+    background: transparent;
+    border-bottom: 2px solid  #00ff00;
+    border-left: 2px solid #00ff00;
+    border-radius: 20px;
+}
+
+#selectionSortButton:hover {
+    color: #00ff00;
+    background: transparent;
+}
+
+#insertionSortButton {
+    color: #ffffff;
+    background: transparent;
+    border-bottom: 2px solid  #00ff00;
+    border-left: 2px solid #00ff00;
+    border-radius: 20px;
+}
+
+#insertionSortButton:hover {
+    color: #00ff00;
+    background: transparent;
+}
+
+#countSortButton {
+    color: #ffffff;
+    background: transparent;
+    border-bottom: 2px solid  #00ff00;
+    border-left: 2px solid #00ff00;
+    border-radius: 20px;
+}
+
+#countSortButton:hover {
+    color: #00ff00;
+    background: transparent;
+}
+
+#mergeSortButton {
+    color: #ffffff;
+    background: transparent;
+    border-bottom: 2px solid  #00ff00;
+    border-left: 2px solid #00ff00;
+    border-radius: 20px;
+}
+
+#mergeSortButton:hover {
+    color: #00ff00;
+    background: transparent;
+}
+.button-styling {
+    background: transparent;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    /* background-color: #007BFF; */
+    border: none;
+    color: white;
+    border-bottom: 2px solid  #00ff00;
+    border-left: 2px solid #00ff00;
+    border-radius: 20px;
+    transition: background-color 0.2s;
+}
+/* Style for the "Add Element" input */
+.element-input {
+    /* Your styles for the "Add Element" input here */
+    color: #ffffff;
+    background: transparent;
+    border-bottom: 2px solid #00ff00;
+    border-left: 2px solid #00ff00;
+    border-radius: 20px;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+/* Style for the "Target" input */
+.target-input {
+    background: transparent;
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px solid #00ff00;
+    border-radius: 5px;
+    margin-right: 10px;
+    color: #00ff00;
+}
+@keyframes typewriter {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+/* Apply the animation to the strong element */
+#animatedText {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #00ff00; /* Create a cursor effect */
+    animation: typewriter 3s steps(40) infinite; /* Run the animation infinitely */
+}
